@@ -1,0 +1,541 @@
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.br_on {
+  display: none;
+}
+
+.for-phone {
+  display: none;
+}
+
+.for-pc {
+  display: block;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.wrap-collabsible {
+  margin: 1.2rem 0;
+}
+
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem 0;
+  color: #fff;
+  text-decoration: underline;
+  background: #806a5c;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+.lbl-toggle:hover {
+  color: #FFF;
+}
+.lbl-toggle::before {
+  content: " ";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100%;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.collapsible-content .content-inner {
+  background: url(../images/section-bg1.jpg) no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid rgba(154, 154, 154, 0.45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0.5rem 1rem;
+}
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron .container .logo {
+  width: clamp(300px, 50%, 900px);
+}
+.jumbotron .container .logo h5 {
+  color: #fff;
+  font-family: "Shippori Mincho B1", serif;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.75em;
+}
+.jumbotron .container .logo h1 {
+  width: clamp(100px, 100%,900px);
+}
+
+section {
+  padding: 3vh 0;
+}
+section .container {
+  padding: 2vh 0;
+}
+
+.section01 {
+  background: #E9B65B;
+}
+.section01 .main {
+  width: clamp(350px, 80%, 912px);
+  margin: 0 auto;
+}
+.section01 .main h5, .section01 .main h4 {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 1.25em;
+}
+.section01 .main h4 {
+  line-height: 2em;
+}
+
+.section02 .flex-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.section02 .flex-container .flex-container-column {
+  flex: 1;
+}
+
+.section03 .img-carousel {
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section04 {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+.section04 .main {
+  width: clamp(350px, 80%, 912px);
+  margin: 0 auto;
+}
+.section04 .main h5, .section04 .main h4 {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 1.25em;
+  color: #fff;
+  line-height: 2em;
+}
+.section04 .main h5 span.maboroshi {
+  font-weight: bold;
+  color: #c9bc9c;
+  background: black;
+  margin: 0 20px;
+}
+.section04 .main h5 span.star {
+  color: #8f8264;
+  font-weight: bold;
+  background: linear-gradient(to bottom, silver, #cdcdcd, silver);
+  margin: 0 20px;
+}
+
+.section05 {
+  background: url(../images/maboroshi-bg.png) no-repeat;
+  aspect-ratio: 16/5;
+  background-position: center;
+  background-size: cover;
+}
+
+.section06 .container .banner, .section07 .container .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/section-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 0;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.section06 .container .banner .text .inner, .section07 .container .banner .text .inner {
+  text-align: center;
+  font-family: "Shippori Mincho B1", serif;
+  width: clamp(300px, 98%, 880px);
+  background: white;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.section06 .container .banner .text .inner h5, .section07 .container .banner .text .inner h5 {
+  font-size: 0.9em;
+  line-height: 2em;
+  padding: 0 20px;
+}
+.section06 .container .banner .text .inner h5.gold, .section07 .container .banner .text .inner h5.gold {
+  color: #c9bc9c;
+  background: black;
+  font-weight: bolder;
+  font-size: 32px;
+  padding: 5px;
+}
+.section06 .container .banner .text .inner h5.gold span, .section07 .container .banner .text .inner h5.gold span {
+  font-size: 0.4em;
+  position: relative;
+  top: -15px;
+  left: 3px;
+}
+.section06 .container .banner .text .inner h5.grey-gradient, .section07 .container .banner .text .inner h5.grey-gradient {
+  color: #8f8264;
+  text-shadow: 1px 1px 3px white;
+  background: black;
+  padding: 5px;
+  background: linear-gradient(to bottom, silver, #cdcdcd, silver);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+  font-weight: bolder;
+  font-size: 32px;
+}
+.section06 .container .banner .text .inner h5.grey-gradient span, .section07 .container .banner .text .inner h5.grey-gradient span {
+  font-size: 0.4em;
+  position: relative;
+  top: -15px;
+  left: 3px;
+}
+
+.section08 {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(../images/section-bg1.jpg);
+  background-size: cover;
+}
+.section08 .banner {
+  font-family: "Shippori Mincho B1", serif;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.section08 .banner .text {
+  padding: 20px 30px;
+}
+.section08 .banner .text ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.section08 .banner .text ul li {
+  font-weight: bold;
+  text-align: center;
+}
+.section08 .banner .text p {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+.section08 .banner .book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/book-background.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section09 {
+  background: url("../images/kb-bg-white.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+.section09 .container {
+  padding: 5vh 0;
+}
+
+.section10 {
+  font-family: "Shippori Mincho B1", serif;
+  background: url("../images/kb-bg-white.jpg");
+  background-size: cover;
+}
+.section10 .container {
+  margin: 6vh auto;
+}
+.section10 .container .text h3 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+.section10 .container .text .button-area {
+  box-shadow: 4px 8px 13px rgba(0, 0, 0, 0.22);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(../images/section-bg1.jpg);
+  background-size: cover;
+  width: 100%;
+  max-width: 480px;
+  margin: 60px auto;
+  text-align: center;
+}
+.section10 .container .text .button-area h5 {
+  background: #806a5c;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0;
+}
+.section10 .container .maboroshi-container {
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+  margin: 5vh auto;
+}
+
+.section11 {
+  font-family: "Shippori Mincho B1", serif;
+  background-size: cover;
+}
+.section11 .container .section11-register .row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section11 .container .section11-register .content {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px 10px;
+  border-radius: 10px;
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.section11 .container .section11-register .content h4 {
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  color: #E9B65B;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.section11 .container .section11-register .content p {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.section12 {
+  font-family: "Shippori Mincho B1", serif;
+  background-size: cover;
+}
+.section12 .container .row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section12 .container .content {
+  height: 100%;
+  padding: 20px 10px 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.section12 .container .content h4 {
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  color: #E9B65B;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.section12 .container .content p {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.section13 .container {
+  font-family: "Shippori Mincho B1", serif;
+}
+
+.section14 {
+  font-family: "Shippori Mincho B1", serif;
+  background: linear-gradient(180deg, #080808 0%, #bbbbbb 100%);
+}
+.section14 .container {
+  padding: 5vh 0;
+  color: white;
+  text-align: center;
+}
+.section14 .container .button-area {
+  box-shadow: 4px 8px 13px rgba(0, 0, 0, 0.22);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(../images/section-bg1.jpg);
+  background-size: cover;
+  width: 100%;
+  max-width: 480px;
+  margin: 60px auto;
+  text-align: center;
+}
+.section14 .container .button-area h5 {
+  background: #806a5c;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+footer {
+  background: black;
+  padding: 10px 0;
+}
+footer .container p {
+  font-size: 0.8em;
+  color: white;
+  line-height: 2em;
+}
+footer .container p a {
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  section .container {
+    width: 96.66667%;
+    max-width: 1160px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .section06 .container .banner .text .inner h5, .section07 .container .banner .text .inner h5 {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 992px) {
+  section .container {
+    width: 90%;
+    max-width: 896px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section .container {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .section06 .container .banner .img, .section07 .container .banner .img {
+    margin-bottom: 3vh;
+  }
+
+  .section10 .container .text, .section10 .container .img-area {
+    margin: 0 auto;
+  }
+
+  .section11 .container .section11-register .col-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .section11 .container .section11-register .col-container .steps {
+    width: 75%;
+    margin: 0 auto 10px;
+    padding: 20px;
+    background: azure;
+  }
+  .section11 .container .section11-register .col-container .steps p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .br_on {
+    display: block;
+  }
+
+  .for-pc {
+    display: none;
+  }
+
+  .for-phone {
+    display: block;
+  }
+
+  .jumbotron .container .logo {
+    margin: 10vh 0;
+  }
+  .jumbotron .container .logo h5 {
+    font-size: 12px;
+    line-height: 1.75em;
+  }
+
+  section .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .section09 .container h4 {
+    font-size: 1em;
+  }
+  .section09 .container h6 {
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+
+  .section13 .container h4 {
+    font-size: 0.9em;
+  }
+
+  .section14 .container h3 {
+    font-size: 1.25em;
+  }
+  .section14 .container h4 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 429px) {
+  .lbl-toggle {
+    font-size: 0.95em;
+  }
+
+  .section01 .main h5, .section01 .main h4 {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+
+  .section01 .container {
+    width: 100%;
+  }
+
+  .section04 .main h4, .section04 .main h5 {
+    font-size: 0.9em;
+  }
+
+  .section05 {
+    aspect-ratio: 3/1;
+  }
+
+  .section08 .banner .text {
+    padding: 20px 5px;
+  }
+  .section08 .banner .text p {
+    text-align: center;
+  }
+
+  .section10 .container .text .inner h3 {
+    font-size: 1em;
+  }
+
+  .section13 .container h4 {
+    font-size: 1em;
+  }
+
+  .section14 .container h3 {
+    font-size: 1.25em;
+  }
+  .section14 .container h4 {
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
