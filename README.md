@@ -1,1 +1,1 @@
-# kamisma-beauty-landing-pg
+HTML5/Bootstrap/SASS(SCSS) Only
