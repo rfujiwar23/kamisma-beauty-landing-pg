@@ -8,6 +8,23 @@ body {
   display: none;
 }
 
+.br_on_tablet {
+  display: none;
+}
+
+.p-img {
+  text-align: right;
+  font-size: 0.7em;
+  margin-top: 10px;
+}
+
+.p-img2 {
+  text-align: right;
+  font-size: 0.7em;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 .for-phone {
   display: none;
 }
@@ -119,7 +136,7 @@ section .container {
   background: #E9B65B;
 }
 .section01 .main {
-  width: clamp(350px, 80%, 912px);
+  width: clamp(350px, 85%, 912px);
   margin: 0 auto;
 }
 .section01 .main h5, .section01 .main h4 {
@@ -267,6 +284,12 @@ section .container {
   background-position: center;
   background-size: cover;
   padding: 0;
+  font-family: "Shippori Mincho B1", serif;
+}
+.section09 p {
+  text-align: right;
+  padding: 10px 20px 0 0;
+  font-size: 0.8em;
 }
 .section09 .container {
   padding: 5vh 0;
@@ -298,6 +321,9 @@ section .container {
   color: white;
   font-size: 24px;
   padding: 20px 0;
+}
+.section10 .container .img-area img {
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.6);
 }
 .section10 .container .maboroshi-container {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
@@ -410,6 +436,10 @@ footer .container p a {
   }
 }
 @media screen and (max-width: 1025px) {
+  .section01 .main h5, .section01 .main h4 {
+    font-size: 1.2em;
+  }
+
   .section06 .container .banner .text .inner h5, .section07 .container .banner .text .inner h5 {
     font-size: 0.8em;
   }
@@ -419,11 +449,23 @@ footer .container p a {
     width: 90%;
     max-width: 896px;
   }
+
+  .section01 .main h5, .section01 .main h4 {
+    font-size: 1.1em;
+  }
+
+  .section06 .container .banner .text .inner, .section07 .container .banner .text .inner {
+    margin: 20px auto;
+  }
 }
 @media screen and (max-width: 768px) {
   section .container {
     width: 100%;
     max-width: 680px;
+  }
+
+  .jumbotron .container .logo h5 {
+    font-size: 1.1em;
   }
 
   .section06 .container .banner .img, .section07 .container .banner .img {
@@ -432,6 +474,9 @@ footer .container p a {
 
   .section10 .container .text, .section10 .container .img-area {
     margin: 0 auto;
+  }
+  .section10 .container .text h3 {
+    font-size: 1em;
   }
 
   .section11 .container .section11-register .col-container {
@@ -448,7 +493,7 @@ footer .container p a {
     text-align: center;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 501px) {
   .br_on {
     display: block;
   }
@@ -466,7 +511,7 @@ footer .container p a {
   }
   .jumbotron .container .logo h5 {
     font-size: 12px;
-    line-height: 1.75em;
+    line-height: 2em;
   }
 
   section .container {
@@ -474,6 +519,29 @@ footer .container p a {
     margin: 0 auto;
   }
 
+  .section01 .container {
+    width: 100%;
+  }
+  .section01 .container .main h5, .section01 .container .main h4 {
+    font-size: 0.8em;
+  }
+
+  .section04 .container {
+    width: 100%;
+  }
+
+  .section04 .main h5, .section04 .main h4 {
+    font-size: 1em;
+  }
+
+  .section08 .banner .text p {
+    text-align: center;
+  }
+
+  .section09 .container p {
+    font-size: 0.9em;
+    text-align: right;
+  }
   .section09 .container h4 {
     font-size: 1em;
   }
@@ -500,7 +568,7 @@ footer .container p a {
 
   .section01 .main h5, .section01 .main h4 {
     font-size: 0.8em;
-    line-height: 1.5em;
+    line-height: 2em;
   }
 
   .section01 .container {

@@ -13,6 +13,23 @@ body {
     display: none;
 }
 
+.br_on_tablet {
+    display:none;
+}
+
+.p-img {
+    text-align: right;
+    font-size:0.7em;
+    margin-top:10px;
+}
+
+.p-img2 {
+    text-align: right;
+    font-size:0.7em;
+    margin-top:10px;
+    margin-right:10px;
+}
+
 .for-phone {
     display:none;
 }
@@ -122,9 +139,7 @@ input[type='checkbox'] {
     }
 }
 
-.main-contents {
-    
-}
+
 
 section {
     padding: 3vh 0;
@@ -138,7 +153,7 @@ section {
 .section01 {
     background: $kamisma-gold;
     .main {
-        width: clamp(350px, 80%, 912px);
+        width: clamp(350px, 85%, 912px);
         margin: 0 auto;
         // background: #fff;
         h5, h4 {
@@ -329,8 +344,15 @@ section {
     background-position: center;
     background-size: cover;
     padding:0;
+    font-family: $kamisma-font;
+    p {
+        text-align:right;
+        padding: 10px 20px 0 0;
+        font-size:0.8em;
+    }
     .container {
         padding:5vh 0;
+        
     }
 }
 
@@ -360,6 +382,11 @@ section {
                     font-size: 24px;
                     padding: 20px 0;
                 }
+            }
+        }
+        .img-area {
+            img {
+                box-shadow: 1px 3px 6px rgba(0,0,0, 0.6);
             }
         }
         .maboroshi-container {
@@ -497,6 +524,15 @@ footer {
 }
 
 @media screen and (max-width:1025px) {
+    
+    .section01 {
+        .main {
+            h5, h4 {
+                font-size:1.2em;
+            }
+        }
+    }
+    
     .section06, .section07 {
         .container {
             .banner {
@@ -519,7 +555,27 @@ footer {
             width: 90%;
             max-width: 896px;
         }
-    }  
+    } 
+    
+    .section01 {
+        .main {
+            h5, h4 {
+                font-size:1.1em;
+            }
+        }
+    }
+
+    .section06, .section07 {
+        .container {
+            .banner {
+                .text {
+                    .inner {
+                        margin:20px auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -528,7 +584,17 @@ footer {
             width: 100%;
             max-width: 680px;
         }
-    }  
+    } 
+    
+    .jumbotron {
+        .container {
+            .logo {
+                h5 {
+                    font-size:1.1em;
+                }
+            }
+        }
+    }
 
     .section06, .section07 {
         .container {
@@ -544,6 +610,9 @@ footer {
         .container {
             .text, .img-area {
                 margin:0 auto;
+            }
+            .text h3 {
+                font-size:1em;
             }
         }
     }
@@ -571,7 +640,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 501px) {
     
     .br_on {
         display: block;
@@ -590,7 +659,7 @@ footer {
             .logo {
                 h5 {
                     font-size:12px;
-                    line-height:1.75em;
+                    line-height:2em;
                 }
                 margin:10vh 0;
             }
@@ -603,8 +672,47 @@ footer {
         }
     }
 
+    .section01 {
+       .container {
+           width: 100%;
+        .main {
+            h5, h4 {
+                font-size:0.8em;
+            }
+        }
+       }
+    }
+
+    .section04 {
+        .container {
+            width: 100%;
+        }
+    }
+
+    .section04 {
+        .main {
+            h5, h4 {
+                font-size:1em;
+            }
+        }
+    }
+   
+
+    .section08 {
+        .banner {
+            .text {
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
     .section09 {
         .container {
+            p {
+                font-size:0.9em;
+                text-align: right;
+            }
             h4 {
                 font-size:1em;
             }
@@ -638,6 +746,10 @@ footer {
     }
 }
 
+@media screen and(max-width: 501px) {
+    
+}
+
 @media screen and (max-width:429px) {
 
     .lbl-toggle {
@@ -648,7 +760,7 @@ footer {
         .main {
             h5, h4 {
                 font-size: 0.8em;
-                line-height: 1.5em;
+                line-height: 2em;
             }
         }
     }
