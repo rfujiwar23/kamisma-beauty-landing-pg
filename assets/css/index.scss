@@ -1,7 +1,7 @@
 $kamisma-white: #fff;
 $kamisma-gold: #E9B65B;
 $kamisma-grey: linear-gradient(to right, #bdc3c7, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+$bg-dark: #555555!important;
 $kamisma-font: 'Shippori Mincho B1', serif;
 
 body {
@@ -116,6 +116,7 @@ input[type='checkbox'] {
     width:100%;
     aspect-ratio: 16/9;
     display: flex;
+    background: $bg-dark;
         justify-content: center;
         align-items: center;
     .container {
@@ -124,7 +125,7 @@ input[type='checkbox'] {
         align-items: center;
         // background: white;
         .logo {
-            width: clamp(300px, 50%, 900px);
+            width: clamp(350px, 50%, 900px);
             h5 {
                 color:$kamisma-white;
                 font-family: $kamisma-font;
@@ -153,7 +154,7 @@ section {
 .section01 {
     background: $kamisma-gold;
     .main {
-        width: clamp(350px, 85%, 912px);
+        width: clamp(400px, 85%, 912px);
         margin: 0 auto;
         // background: #fff;
         h5, h4 {
@@ -494,6 +495,38 @@ section {
                 padding: 20px 0;
             }
         }
+        .sns-links {
+            .icon{
+                width: 60px;
+                height: 60px;
+                border-radius: 15px;
+                text-align: center;
+                background-image: linear-gradient(155deg, #4C57A2 8%, #87439A 50%, #e02870 85%);
+                position: relative;
+                overflow: hidden;
+                &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 30%;
+                    left: -60%;
+                    width: 150%;
+                    height: 150%;
+                    background: radial-gradient(rgba(246, 221, 132,1) 15%, 
+                        rgba(255, 45, 45, 0.65) 50%, 
+                        rgba(0, 0, 0, 0) 70%);
+                }
+                i{
+                    color: #fff;
+                    font-size: 50px;
+                    line-height: 60px;
+                    position: relative;
+                    left:-4px;
+                    z-index: 1;
+                }
+            }
+            
+        }
     }
 }
 
@@ -556,6 +589,18 @@ footer {
             max-width: 896px;
         }
     } 
+
+    .jumbotron {
+        .container {
+            .logo {
+                h5 {
+                    font-size:1em;
+                }
+            }
+        }
+    }
+
+
     
     .section01 {
         .main {
@@ -590,7 +635,7 @@ footer {
         .container {
             .logo {
                 h5 {
-                    font-size:1.1em;
+                    font-size:1em;
                 }
             }
         }
@@ -637,6 +682,13 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .jumbotron {
+       aspect-ratio: 4/3;
+       
     }
 }
 
