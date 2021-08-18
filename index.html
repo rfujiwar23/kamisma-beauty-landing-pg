@@ -16,9 +16,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+
 
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
 </head>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarSupportedContent')
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { bsCollapse.toggle() })
+})
+</script>
+
 <body>
     <div class="wrapper">
 
@@ -30,7 +42,7 @@
         </div>
       </nav> -->
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="https://www.kamisma.com"><img src="assets/images/kami-charisma-favicon.png" alt="KB" width="40"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,18 +50,54 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" href="index.html">トップ</a>
-              <a class="nav-link" href="#what-is-kamisma">KAMISMA BEAUTYとは</a>
-              <a class="nav-link" href="#maboroshi">幻の一枠</a>
-              <a class="nav-link" href="#star">星の三枠</a>
-              <a class="nav-link" href="#kami-charisma">カミカリスマとは</a>
-              <a class="nav-link" href="#reserve">ご予約</a>
-              <a class="nav-link" href="#howTo">ご利用方法</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="index.html">トップ</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#what-is-kamisma">KAMISMA BEAUTYとは</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#maboroshi">幻の一枠</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#star">星の三枠</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#kami-charisma">カミカリスマとは</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#reserve">ご予約</a>
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#howTo">ご利用方法</a>
               
             </div>
           </div>
         </div>
-      </nav>
+      </nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="https://www.kamisma.com"><img src="assets/images/kami-charisma-favicon.png" alt="KB" width="40"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">トップ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#what-is-kamisma">KAMISMA BEAUTYとは</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#maboroshi">幻の一枠</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#star">星の三枠</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kami-charisma">カミカリスマとは</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reserve">ご予約</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#howTo">ご利用方法</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
 
         <div class="jumbotron">
             <div class="container">
@@ -139,7 +187,7 @@
                     <div class="main">
                       <h5>技術・空間・おもてなし―――</h5>
                     <h5>日本の美容室は世界の中でも高い品質を提供しています。</h5>
-                    <h5>そのクオリティから、近年では「美容室体験」を目的として日本に訪れる人も増えています。</h5>
+                    <h5>そのクオリティから、近年では「美容室体験」を目的として<br class="br_on">日本に訪れる人も増えています。</h5>
                     <h4 class="mt-5">KAMISMA BEAUTYでは、<br>そんな日本の美容文化を盛り上げている美容師の中でも、<br>日本が誇る一流美容師の特別な限定メニューを<br class="br_on_tabet">ご予約いただけます。</h4>
                     </div>
                 </div>

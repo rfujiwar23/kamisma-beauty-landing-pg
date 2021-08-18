@@ -270,6 +270,7 @@ section .container {
 .section08 .banner .text p {
   margin-top: 20px;
   font-size: 0.8em;
+  line-height: 2em;
 }
 .section08 .banner .book {
   display: flex;
