@@ -137,7 +137,7 @@ section .container {
   background: #E9B65B;
 }
 .section01 .main {
-  width: clamp(350px, 85%, 912px);
+  width: 85%;
   margin: 0 auto;
 }
 .section01 .main h5, .section01 .main h4 {
@@ -646,6 +646,15 @@ footer .container p a {
   }
   .section14 .container h4 {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 375px) {
+  .lbl-toggle {
+    font-size: 0.95em;
+  }
+
+  .section01 .container .main h5, .section01 .container .main h4 {
+    font-size: 0.7em;
   }
 }
 
