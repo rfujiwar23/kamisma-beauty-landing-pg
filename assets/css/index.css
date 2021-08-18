@@ -653,8 +653,11 @@ footer .container p a {
     font-size: 0.95em;
   }
 
+  .section01 .container .main {
+    width: 100%;
+  }
   .section01 .container .main h5, .section01 .container .main h4 {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 
