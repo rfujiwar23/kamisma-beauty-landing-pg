@@ -553,7 +553,7 @@ footer .container p a {
     margin: 10vh 0;
   }
   .jumbotron .container .logo h5 {
-    font-size: 12px;
+    font-size: 0.8em;
     line-height: 2em;
   }
 
@@ -646,6 +646,11 @@ footer .container p a {
   }
   .section14 .container h4 {
     font-size: 1em;
+  }
+}
+@media only screen and (device-width: 390px) {
+  .section01 .main {
+    width: 95%;
   }
 }
 @media screen and (max-width: 375px) {
